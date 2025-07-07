@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2024/1/26 上午11:16
 # @Author  : sudoskys
-# @File    : text2image.py
+# @File    : generate_image.py
 
 from typing import Tuple, List
 
