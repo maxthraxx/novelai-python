@@ -26,6 +26,7 @@ from novelai_python.sdk.ai._enum import Model, Sampler, NoiseSchedule, Action, U
     get_model_group, ModelGroups, get_supported_params, get_modifiers
 from .params import Params, get_default_params
 from .schema import Character, V4Prompt, V4NegativePrompt, PositionMap
+from .suggest_tags import SuggestTags
 from ...schema import ApiBaseModel
 from ...._exceptions import APIError, AuthError, ConcurrentGenerationError, SessionHttpError, DataSerializationError
 from ...._response.ai.generate_image import ImageGenerateResp, RequestParams
