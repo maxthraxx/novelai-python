@@ -521,7 +521,8 @@ class GenerateImageInfer(ApiBaseModel):
             reference_information_extracted_multiple: List[float] = None,
             qualityToggle: bool = None,
             decrisp_mode: bool = None,
-            variety_boost: bool = None
+            variety_boost: bool = None,
+            use_trial: bool = True
     ):
         """
         Quickly construct a parameter class that meets the requirements.
@@ -598,7 +599,8 @@ class GenerateImageInfer(ApiBaseModel):
             input=prompt,
             model=model,
             action=Action.IMG2IMG,
-            parameters=params
+            parameters=params,
+            use_new_shared_trial=use_trial
         )
 
     @staticmethod
