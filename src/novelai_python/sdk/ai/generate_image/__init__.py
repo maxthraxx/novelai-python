@@ -65,6 +65,7 @@ class GenerateImageInfer(ApiBaseModel):
     model: ModelTypeAlias = "nai-diffusion-3"
     action: Union[str, Action] = Field(Action.GENERATE, description="Mode for img generate")
     parameters: Union[Params]
+    use_new_shared_trial: bool = False
     model_config = ConfigDict(extra="ignore")
 
     @override
@@ -422,6 +423,7 @@ class GenerateImageInfer(ApiBaseModel):
             decrisp_mode: bool = None,
             variety_boost: bool = None,
             furry_mode: bool = None,
+            use_trial: bool = False
     ):
         """
         Quickly construct a parameter class that meets the requirements.
@@ -492,7 +494,8 @@ class GenerateImageInfer(ApiBaseModel):
             input=prompt,
             model=model,
             action=Action.GENERATE,
-            parameters=params
+            parameters=params,
+            use_new_shared_trial=use_trial
         )
 
     @staticmethod
